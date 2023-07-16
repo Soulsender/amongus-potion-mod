@@ -5,6 +5,7 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
@@ -41,7 +42,7 @@ public class AmongusRedEntity extends AnimalEntity implements GeoEntity {
         this.goalSelector.add(4, new LookAroundGoal(this));
 
         // this makes the entity attack players, merchants, and chickens
-//        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
 //        this.targetSelector.add(2, new ActiveTargetGoal<>(this, MerchantEntity.class, true));
 //        this.targetSelector.add(3, new ActiveTargetGoal<>(this, ChickenEntity.class, true));
     }
