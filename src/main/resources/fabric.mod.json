@@ -17,6 +17,8 @@
 	"entrypoints": {
 		"main": [
 			"name.modid.AmongusPotion"
+		],"client": [
+			"name.modid.AmongusPotionClient"
 		]
 	},
 	"mixins": [
