@@ -19,11 +19,12 @@ public class AmongusPotion implements ModInitializer {
 	// logger for debugging and logging
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+
 	@Override
 	public void onInitialize() {
 		// load all modded additions into the registry
 		ModEffects.registerEffects();
-		ModItems.registerItems();
+		ModItems.registerModItems();
 		ModPotions.registerPotions();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.AMONGUS_RED, AmongusRedEntity.setAttributes());
